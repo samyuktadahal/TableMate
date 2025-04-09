@@ -1,0 +1,19 @@
+.add-button {
+  padding: 8px 16px;
+  background-color: #ff7a1c;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.add-btn-group{
+  padding-top: 8px;
+}
+.set-item-quantity{
+  border: 1px solid #ff7a1c;
+  padding: 4px;
+}
+.add-button:hover {
+  background-color: #ff914d;
+}

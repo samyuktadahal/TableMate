@@ -1,0 +1,114 @@
+/* navbar.css */
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f7f4;
+  position: relative;
+  z-index: 10;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+.navbar-scroll-up{
+  position: sticky;
+  animation: pull-down 0.3s;
+  left: 0;
+  right: 0;
+  top: 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+@keyframes pull-down{
+  0%{
+    transform: translateY(-100px);
+  }
+  100%{
+    transform: translateY(0px);
+  }
+}
+
+.container-fluid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+}
+.nav-item{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.navbar-brand:hover {
+  text-decoration: none;
+}
+
+.navbar-nav {
+  text-decoration: none;
+  color: #333;
+}
+
+#navbarScroll .navactive {
+  font-weight: bold;
+  color: #007bff;
+}
+
+.autocomplete-suggestions {
+  top: 39px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  min-width: 200px;
+  box-sizing: border-box;
+  box-shadow: 1px 1px 13px gray, -1px -1px 3px gray;
+  border-radius: 5px;
+  overflow: hidden;
+  z-index: 1000;
+}
+.suggestion-item {
+  padding: 10px;
+  transition: all 0.3s ease-in-out;
+  min-width: 100px;
+  z-index: 100;
+  background-color: #eeeae6;
+}
+.suggestion-item:hover {
+  background-color: #0867ffe6;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1000px) {
+  .navbar-scroll-up{
+    position: fixed;
+  }
+  }
+  @media (max-width: 768px) {
+  .navbar {
+    justify-content: space-between;
+  }
+
+  .navbar-nav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .navbar-toggler {
+    align-self: flex-end;
+  }
+}
+
+@media (max-width: 200px) {
+  .navbar-brand {
+    font-size: 1rem;
+  }
+  .navbar-nav .nav-item {
+    font-size: 0.8rem;
+  }
+}
